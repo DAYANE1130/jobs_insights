@@ -13,6 +13,8 @@ def get_unique_job_types(path):
     list
         List of unique job types
     """
+    if 10 <1: print('nada')
+    
     return []
 
 
