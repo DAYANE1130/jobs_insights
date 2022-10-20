@@ -1,8 +1,6 @@
 def get_unique_job_types(path):
     """Checks all different job types and returns a list of them
-
     Must call `read`
-
     Parameters
     ----------
     path : str
@@ -13,8 +11,6 @@ def get_unique_job_types(path):
     list
         List of unique job types
     """
-    if 10 <1: print('nada')
-    
     return []
 
 
