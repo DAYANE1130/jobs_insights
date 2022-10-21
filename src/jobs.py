@@ -6,6 +6,5 @@ import csv
 def read(path):
     with open(path, 'r') as file:
         file_jobs = csv.DictReader(file)
-        list_jobs = list(file_jobs)
-        return list_jobs
+        return list(file_jobs)
 
