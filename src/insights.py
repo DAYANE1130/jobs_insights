@@ -32,44 +32,21 @@ def get_unique_industries(path):
     list_industry = set()
     for industry in list_job:
         if industry["industry"] != "":
-          list_industry.add(industry["industry"])
+            list_industry.add(industry["industry"])
     return list_industry
 
 
 def filter_by_industry(jobs, industry):
-    """Filters a list of jobs by industry
-
-    Parameters
-    ----------
-    jobs : list
-        List of jobs to be filtered
-    industry : str
-        Industry for the list filter
-
-    Returns
-    -------
-    list
-        List of jobs with provided industry
-    """
     return []
 
 
 def get_max_salary(path):
-    """Get the maximum salary of all jobs
-
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    int
-        The maximum salary paid out of all job opportunities
-    """
-    pass
+    list_job = read(path)
+    better_salary = set()
+    for salary in list_job:
+        if salary["max_salary"] != "" and salary["max_salary"].isdigit():
+            better_salary.add(int(salary["max_salary"]))
+    return max(better_salary)
 
 
 def get_min_salary(path):
