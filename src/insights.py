@@ -1,4 +1,3 @@
-from curses.ascii import isdigit
 from src.jobs import read
 
 
@@ -64,22 +63,8 @@ def matches_salary_range(job, salary):
     ):
         raise ValueError
 
-    return job["min_salary"] <= salary  <= job["max_salary"] 
+    return job["min_salary"] <= salary <= job["max_salary"]
 
 
 def filter_by_salary_range(jobs, salary):
-    """Filters a list of jobs by salary range
-
-    Parameters
-    ----------
-    jobs : list
-        The jobs to be filtered
-    salary : int
-        The salary to be used as filter
-
-    Returns
-    -------
-    list
-        Jobs whose salary range contains `salary`
-    """
-    return []
+    ...
