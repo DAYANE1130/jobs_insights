@@ -68,8 +68,12 @@ def matches_salary_range(job, salary):
 
 def filter_by_salary_range(jobs, salary):
     list_jobs =[]
-    if 'get' in jobs is None:
-        matches_salary_range(jobs, salary)
-    list_jobs.append(jobs)
-    print(jobs)
+    for job in jobs:
+        try:
+            if matches_salary_range(job, salary):
+                list_jobs.append(job)
+        except ValueError:
+            pass
+
     return list_jobs
+
